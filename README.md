@@ -52,6 +52,8 @@ pip install -r requirements.txt
 ```
 - `winehq-stable` for cartoon face warping in Ubuntu (https://wiki.winehq.org/Ubuntu). Tested on Ubuntu16.04, wine==5.0.3.
 ```
+sudo apt-get update
+sudo apt install software-properties-common
 sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
