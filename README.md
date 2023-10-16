@@ -48,7 +48,7 @@ to amply lip motion (in x/y-axis direction) and head motion displacements, defau
 
 
 
-### _Cartoon Faces_ 
+## _Cartoon Faces_ 
 
 - put test audio files under `examples` folder as well with `.wav` format.
 
