@@ -40,7 +40,7 @@ Make sure the head is almost in the middle (check existing examples for a refere
 - animate!
 
 ```
-python main_end2end.py --jpg <portrait_file>  
+python main_end2end.py --jpg Obama_256.jpg
 ```
 
 - use addition args `--amp_lip_x <x> --amp_lip_y <y> --amp_pos <pos>` 
