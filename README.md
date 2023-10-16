@@ -44,7 +44,7 @@ conda activate makeittalk_env
 ```
 - ffmpeg (https://ffmpeg.org/download.html)
 ```
-sudo apt-get install ffmpeg
+conda install ffmpeg
 ```
 - python packages
 ```
