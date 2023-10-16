@@ -37,7 +37,7 @@ Our method creates both non-photorealistic cartoon animations (top) and natural 
 - [ ] Training code for each module
 
 ## Requirements
-- Python environment 3.6
+- Python environment 3.6，但是用py3.6根本安装不了这个requirement啊，试试3.7吧
 ```
 conda create -n makeittalk_env python=3.6
 conda activate makeittalk_env
