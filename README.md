@@ -35,7 +35,7 @@ sudo apt install --install-recommends winehq-stable
 - crop your portrait image into size `256x256` and put it under `examples` folder with `.jpg` format. 
 Make sure the head is almost in the middle (check existing examples for a reference).
 
-- put test audio files under `examples` folder as well with `.wav` format.
+- put test audio files under `examples` folder as well with `tmp.wav` format.
 
 - animate!
 
