@@ -1,7 +1,10 @@
 face_alignment
-numba==0.48.0
+
 librosa==0.7.1
+
 matplotlib
+numba==0.48.0
+numpy==1.20.0
 opencv-python
 pydub
 pynormalize
