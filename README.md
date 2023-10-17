@@ -24,7 +24,15 @@ sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial ma
 sudo apt update
 sudo apt install --install-recommends winehq-stable
 ```
+Pre-trained Models
+Download the following pre-trained models to examples/ckpt folder for testing your own animation.
 
+Model	Link to the model
+Voice Conversion	Link
+Speech Content Module	Link
+Speaker-aware Module	Link
+Image2Image Translation Module	Link
+Non-photorealistic Warping (.exe)	Link
 
 ## Animate You Portraits!
 
