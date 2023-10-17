@@ -24,15 +24,17 @@ sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial ma
 sudo apt update
 sudo apt install --install-recommends winehq-stable
 ```
-Pre-trained Models
-Download the following pre-trained models to examples/ckpt folder for testing your own animation.
+## Pre-trained Models
 
-Model	Link to the model
-Voice Conversion	Link
-Speech Content Module	Link
-Speaker-aware Module	Link
-Image2Image Translation Module	Link
-Non-photorealistic Warping (.exe)	Link
+Download the following pre-trained models to `examples/ckpt` folder for testing your own animation.
+
+| Model |  Link to the model | 
+| :-------------: | :---------------: |
+| Voice Conversion  | [Link](https://drive.google.com/file/d/1ZiwPp_h62LtjU0DwpelLUoodKPR85K7x/view?usp=sharing)  |
+| Speech Content Module  | [Link](https://drive.google.com/file/d/1r3bfEvTVl6pCNw5xwUhEglwDHjWtAqQp/view?usp=sharing)  |
+| Speaker-aware Module  | [Link](https://drive.google.com/file/d/1rV0jkyDqPW-aDJcj7xSO6Zt1zSXqn1mu/view?usp=sharing)  |
+| Image2Image Translation Module  | [Link](https://drive.google.com/file/d/1i2LJXKp-yWKIEEgJ7C6cE3_2NirfY_0a/view?usp=sharing)  |
+| Non-photorealistic Warping (.exe)  | [Link](https://drive.google.com/file/d/1rlj0PAUMdX8TLuywsn6ds_G6L63nAu0P/view?usp=sharing)  |
 
 ## Animate You Portraits!
 
