@@ -417,9 +417,8 @@ class Image_translation_block():
                 g_out_grey =np.mean(g_out, axis=3, keepdims=True)
                 g_out[:, :, :, 0:1] = g_out[:, :, :, 1:2] = g_out[:, :, :, 2:3] = g_out_grey
 
-
+            print("render frame:",i)
             for i in range(g_out.shape[0]):
-                print("****************************************************")
                 frame = np.concatenate((ref_in[i], g_out[i], fls_in[i]), axis=1) * 255.0
                 frame256 = np.array(g_out[i]) * 255.0
                 #print("g_out shpe:",g_out.shape)
