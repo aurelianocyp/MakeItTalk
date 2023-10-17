@@ -2,7 +2,7 @@
 ## Requirements
 - Python environment 3.6，但是用py3.6根本安装不了这个requirement啊，试试3.7吧
 ```
-conda env create -n environment.yaml
+conda env create -f environment.yaml
 conda activate makeittalk_env
 ```
 - ffmpeg (https://ffmpeg.org/download.html)
