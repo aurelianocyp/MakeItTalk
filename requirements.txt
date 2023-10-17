@@ -10,3 +10,4 @@ pyworld
 resemblyzer
 matplotlib
 torchvivsion
+librosa==0.7.1
