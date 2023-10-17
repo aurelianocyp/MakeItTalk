@@ -37,7 +37,7 @@ Download the following pre-trained models to `examples/ckpt` folder for testing 
 | Non-photorealistic Warping (.exe)  | [Link](https://drive.google.com/file/d/1rlj0PAUMdX8TLuywsn6ds_G6L63nAu0P/view?usp=sharing)  |
 
 ## Animate You Portraits!
-
+在src/approaches/train_image_translation.py中可以指定帧率
 - Download pre-trained embedding [[here]](https://drive.google.com/file/d/18-0CYl5E6ungS3H4rRSHjfYvvm-WwjTI/view?usp=sharing) and save to `examples/dump` folder.
 
 ### _Nature Human Faces / Paintings_
