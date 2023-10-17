@@ -68,11 +68,12 @@ opt_parser = parser.parse_args()
 
 ''' STEP 1: preprocess input single image '''
 img =cv2.imread('examples/' + opt_parser.jpg)
-predictor = face_alignment.FaceAlignment(face_alignment.LandmarksType._3D, device='cuda', flip_input=True)
-shapes = predictor.get_landmarks(img)
 # face_alignment得小于等于1.3.4，否则AttributeError: _3D
 # 1.3.4，1.3.3，1.2.0会出现 CPUDispatcher，所以应该不是face_alignment的原因
 # 就是face_alignment的原因，mlgb，face_alignment得1.2.0
+predictor = face_alignment.FaceAlignment(face_alignment.LandmarksType._3D, device='cuda', flip_input=True)
+shapes = predictor.get_landmarks(img)
+
 if (not shapes or len(shapes) != 1):
     print('Cannot detect face landmarks. Exit.')
     exit(-1)
