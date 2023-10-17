@@ -1,4 +1,3 @@
-ffmpeg-python
 opencv-python
 face_alignment
 scikit-learn
@@ -9,3 +8,5 @@ librosa
 pysptk
 pyworld
 resemblyzer
+matplotlib
+torchvivsion
