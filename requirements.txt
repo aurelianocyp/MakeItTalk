@@ -4,11 +4,12 @@ librosa==0.7.1
 
 matplotlib
 numba==0.48.0
-numpy==1.20.0
+numpy==1.17.3
 opencv-python
 pydub
 pynormalize
 pysptk
+PyWavelets==1.2.0
 pyworld
 Resemblyzer==0.1.1.dev0
 scikit-learn
