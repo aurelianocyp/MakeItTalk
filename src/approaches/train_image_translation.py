@@ -384,7 +384,7 @@ class Image_translation_block():
             fls[:, 1::3] += 80
 
         writer = cv2.VideoWriter('out.mp4', cv2.VideoWriter_fourcc(*'mjpg'), 62.5, (256 * 3, 256))
-        writer256 = cv2.VideoWriter('out_256.mp4', cv2.VideoWriter_fourcc(*'mjpg'), 62.5, (256 * 3, 256))
+        writer256 = cv2.VideoWriter('out_256.mp4', cv2.VideoWriter_fourcc(*'mjpg'), 62.5, (256, 256))
 
         for i, frame in enumerate(fls):
 
@@ -419,9 +419,10 @@ class Image_translation_block():
 
 
             for i in range(g_out.shape[0]):
-                print("frame:",i)
+                print("****************************************************")
                 frame = np.concatenate((ref_in[i], g_out[i], fls_in[i]), axis=1) * 255.0
-                frame256 = np.concatenate((g_out[i]), axis=1) * 255.0
+                frame256 = np.array(g_out[i]) * 255.0
+                #print("g_out shpe:",g_out.shape)
                 writer.write(frame.astype(np.uint8))
                 writer256.write(frame256.astype(np.uint8))
                 
