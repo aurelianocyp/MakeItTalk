@@ -3,16 +3,13 @@
 - Python environment 3.6，但是用py3.6根本安装不了这个requirement啊，试试3.7吧
 ```
 conda env create -f environment.yaml
-conda activate makeittalk_env
+conda activate makeittalk
 ```
 - ffmpeg (https://ffmpeg.org/download.html)
 ```
 conda install ffmpeg
 ```
-- python packages
-```
-pip install -r requirements.txt
-```
+
 - `winehq-stable` for cartoon face warping in Ubuntu (https://wiki.winehq.org/Ubuntu). Tested on Ubuntu16.04, wine==5.0.3.
 ```
 sudo apt-get update
