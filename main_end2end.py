@@ -178,6 +178,6 @@ for i in range(0,len(fls)):
     ''' STEP 6: Imag2image translation '''
     model = Image_translation_block(opt_parser, single_test=True)
     with torch.no_grad():
-        model.single_test(jpg=img, fls=fl, filename=fls[i], prefix=opt_parser.jpg.split('.')[0])
+        model.single_test(jpg=img, fls=fl, filename=fls[i], prefix=opt_parser.jpg.split('.')[0]) # 在这里面渲染
         print('finish image2image gen')
     os.remove(os.path.join('examples', fls[i]))
