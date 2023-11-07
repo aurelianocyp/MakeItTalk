@@ -21,10 +21,11 @@ sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial ma
 sudo apt update
 sudo apt install --install-recommends winehq-stable
 ```
+最后一步的install有问题的话试一试`sudo apt-get  install wine`吧，或者换成清华源试一试吧，换成清华源也许会出现公匙出问题的情况，无解
 ## Pre-trained Models
 
 Download the following pre-trained models to `examples/ckpt` folder for testing your own animation.
-
+等提示没有模型的时候再放置模型吧，下述模型估计都得放置
 | Model |  Link to the model | 
 | :-------------: | :---------------: |
 | Voice Conversion  | [Link](https://drive.google.com/file/d/1ZiwPp_h62LtjU0DwpelLUoodKPR85K7x/view?usp=sharing)  |
