@@ -383,7 +383,8 @@ class Image_translation_block():
             fls[:, 0::3] += 130
             fls[:, 1::3] += 80
 
-        writer = cv2.VideoWriter('out.mp4', cv2.VideoWriter_fourcc(*'mjpg'), 62.5, (256 * 3, 256))
+        #writer = cv2.VideoWriter('out.mp4', cv2.VideoWriter_fourcc(*'mjpg'), 62.5, (256 * 3, 256))
+        writer256 = cv2.VideoWriter('out_256.mp4', cv2.VideoWriter_fourcc(*'mjpg'), 62.5, (256, 256))
 
         for i, frame in enumerate(fls):
 
@@ -405,8 +406,8 @@ class Image_translation_block():
 
             g_out = g_out.cpu().detach().numpy().transpose((0, 2, 3, 1))
             g_out[g_out < 0] = 0
-            ref_in = image_in[:, 3:6, :, :].cpu().detach().numpy().transpose((0, 2, 3, 1))
-            fls_in = image_in[:, 0:3, :, :].cpu().detach().numpy().transpose((0, 2, 3, 1))
+            #ref_in = image_in[:, 3:6, :, :].cpu().detach().numpy().transpose((0, 2, 3, 1))
+            #fls_in = image_in[:, 0:3, :, :].cpu().detach().numpy().transpose((0, 2, 3, 1))
             # g_out = g_out.cpu().detach().numpy().transpose((0, 3, 2, 1))
             # g_out[g_out < 0] = 0
             # ref_in = image_in[:, 3:6, :, :].cpu().detach().numpy().transpose((0, 3, 2, 1))
@@ -416,17 +417,22 @@ class Image_translation_block():
                 g_out_grey =np.mean(g_out, axis=3, keepdims=True)
                 g_out[:, :, :, 0:1] = g_out[:, :, :, 1:2] = g_out[:, :, :, 2:3] = g_out_grey
 
-
+            print("render frame:",i)
             for i in range(g_out.shape[0]):
-                frame = np.concatenate((ref_in[i], g_out[i], fls_in[i]), axis=1) * 255.0
-                writer.write(frame.astype(np.uint8))
+                #frame = np.concatenate((ref_in[i], g_out[i], fls_in[i]), axis=1) * 255.0
+                frame256 = np.array(g_out[i]) * 255.0
+                #print("g_out shpe:",g_out.shape)
+                #writer.write(frame.astype(np.uint8))
+                writer256.write(frame256.astype(np.uint8))
+                
 
-        writer.release()
+        #writer.release()
+        writer256.release()
         print('Time - only video:', time.time() - st)
 
         if(filename is None):
             filename = 'v'
-        os.system('ffmpeg -loglevel error -y -i out.mp4 -i {} -pix_fmt yuv420p -strict -2 examples/{}_{}.mp4'.format(
+        os.system('ffmpeg -loglevel error -y -i out_256.mp4 -i {} -pix_fmt yuv420p -strict -2 examples/{}_{}.mp4'.format(
             'examples/'+filename[9:-16]+'.wav',
             prefix, filename[:-4]))
         # os.system('rm out.mp4')
